@@ -12,7 +12,7 @@ def open_and_read_file(file_path):
     with open (file_path,"r") as file:
         data = file.read().replace("\n", " ")
 
-
+    
     return data
 
 
@@ -57,7 +57,8 @@ def make_chains(text_string):
                 lst.append(text_string[i+2])
         if chains[tup] ==[]:
             chains[tup] = None
-            
+
+    print (chains)       
     return chains
  
 

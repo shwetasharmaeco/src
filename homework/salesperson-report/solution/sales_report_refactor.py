@@ -26,7 +26,7 @@ def get_melons_sold_by_salesperson(log_file_path):
             else:
                 mels_by_sales[salesperson_name] = int(melons_sold)
 
-            mels_by_sales[salesperson_name] = int(melons_sold)
+    
 
     return mels_by_sales
 
