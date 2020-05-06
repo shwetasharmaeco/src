@@ -1,1 +1,2 @@
-# Shweta's version of src. Covers Hackbright lab attempts.
+# Covers Hackbright lab attempts.
+@shwetasharmaeco
