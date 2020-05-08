@@ -3,9 +3,11 @@
 
 from melons import melon_names, melon_seedlessness, melon_prices
 
-
+melon_dict = {}
 def print_melon(name, seedless, price):
     """Print each melon with corresponding attribute information."""
+    for i, melon in melon_names.items():
+        melon_dict[melon]={}
 
     have_or_have_not = 'have'
     if seedless:
