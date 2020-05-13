@@ -48,6 +48,7 @@ class Cupcake:
                 return cls.cache[name]
         print ("Sorry, that cupcake doesn't exist")
 # test_cupcake = Cupcake('testing 123',0)
+test_Brownie = Brownie()
 
 class Brownie(Cupcake):
     def __init__(self, name, price):
