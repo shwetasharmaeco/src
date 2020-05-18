@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+
+<head>
+	<style>	
+
+	h1{font: sans-serif;
+	color: red;
+text-align: center}
+
+	body{background-color: #f4ae72 ;}
+
+	form{text-align: center}
+
+	</style>
+
+	<title> Welcome to Ubermelon! </title>
+	
+</head>
+<body>
+	 
+	<h1> UberMelon’s Most Loved Melons </h1>
+
+	<center>
+	<img  src = "https://media.gettyimages.com/photos/melon-wallpaper-picture-id157405770?s=2048x2048" > 
+	</center>
+	<br>
+
+	<form action= "/get-name">
+		
+		<label for ="name" color= "red"> <b> What is your name? </b> </label>
+			<input type= "text" name= "name"  required>
+			<br><br>
+			<input type= "submit">
+	</form>
+</body>	
+
+{% endblock %}

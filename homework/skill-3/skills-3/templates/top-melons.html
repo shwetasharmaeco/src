@@ -1,0 +1,59 @@
+
+<html>
+{% extends 'base.html' %}
+
+{% block body %}
+<head>
+  <title>Top Melons</title>
+  <style>
+  	h1,h2,h3{ color: red;
+
+  	}
+
+  	img{
+  		border: solid green;
+  	}
+  	body{
+  		background-color: #f4ae72 ;
+  	}
+  </style>
+
+</head>
+<body>
+	<h1> Welcome, {{session["name"]}}! </h1>
+	  <!-- Create a div for every Most Loved Melon using a Jinja for-loop -->
+  	{% for melon, dict in melons_dict.items() %}
+  
+ 	<div class="melon-div">
+
+		<h2 class="heading"> {{session["name"]}}, this is a {{dict['name']}}</h2>
+
+
+		<img src= "{{dict['img']}}"> 
+
+		<h3> {{dict['num_loves']}} likes</h3>
+		<br>
+
+		<br><br>
+
+	{% endfor %}
+
+	<form action="/love-melon" method="POST">
+		<label for="favorite melon"> Choose your favorite melon:</label>
+		<br><br>
+			<select>
+				{% for melon, dict in melons_dict.items() %}
+				<option value= "{{melon}}" > {{dict['name']}} </option>
+				{% endfor %}
+			</select>
+			<input type="submit">
+
+	</form>
+	
+
+    </div>
+
+</body>
+{% endblock %}
+</html>
+
